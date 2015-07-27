@@ -7,7 +7,7 @@
                 <ActionItem text="pop"   ios.position="right"  android.position="popup"/>
             </ActionBar.actionItems>
         </ActionBar>
-    <Page.actionBar>
+    </Page.actionBar>
     <StackLayout>
       <Label text="The WebView component below will load a local HTML file with a path, starting with ~" cssClass="title"/>
       <WebView src="{{ webViewUrl }}" minHeight="20" minWidth="20" loadFinished="{{ loadFinished }}"/>

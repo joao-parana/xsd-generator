@@ -1,7 +1,7 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
     <Page.actionBar>
         <ActionBar title="{{title}}" android.icon="res://ic_test"/>
-    <Page.actionBar>
+    </Page.actionBar>
     <StackLayout>
       <Label text="The WebView component below will load a local HTML file with a path, starting with ~" cssClass="title"/>
       <WebView src="{{ webViewUrl }}" minHeight="20" minWidth="20" loadFinished="{{ loadFinished }}"/>
