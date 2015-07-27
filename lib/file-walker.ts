@@ -193,7 +193,8 @@ export class FileWalker {
             '"ui/core/view".View',
             "any",
             '"image-source".ImageSource',
-            '"ui/frame".Frame'
+            '"ui/frame".Frame',
+            '"ui/page".Page'
         ];
 
         if (filteredPropertyTypes.indexOf(prop.type.fullName) >= 0) {
