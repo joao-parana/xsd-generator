@@ -9,7 +9,6 @@ export class ValidatorFactory {
     public constructor() {
         this._registeredValidators = new Map<string, Validator>();
         this._validatorIndex = new Map<string, Validator>();
-debugger;
         //Register the initial validators that are core type-dependent:
         this.getValidator(new Type("Binding"));
     }
@@ -69,12 +68,17 @@ debugger;
             case 'Array':
             case '"ui/page".OptionsMenu':
     //TODO: THIS IS A BUG! THE ActionButton property is a complex property, it is not declared as a simple attribute!
+//            case '"ui/action-bar".NavigationButton':
+//            case '"ui/action-bar".ActionItems':
+//            case '"ui/action-bar".ActionBar':
+                return this._retrieveValidator("StringValidator", () => { return new StringValidator() });
             case '"ui/action-bar".NavigationButton':
             case '"ui/action-bar".ActionItems':
-            case '"ui/page".Page':
             case '"ui/action-bar".ActionBar':
+                console.log("REMOVE ME" + type.fullName);
                 return this._retrieveValidator("StringValidator", () => { return new StringValidator() });
             default:
+                debugger;
                 throw new Error(`No validator for type ${type.fullName}!`);
         }
     }
